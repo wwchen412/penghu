@@ -1,3 +1,23 @@
+$deafaultColor:#222;
+$lightColor : #fff;
+$secondColor:#DAD0BA;
+$darker:#888;
+
+
+// bg-colors
+
 .bg_green{
     background-image:url('../img/green_01.jpg');
 }
+.bg_green_light{
+    background-image:url('../img/green_02.jpg');
+}
+
+
+// text-colors
+.text-light{
+    color:$lightColor;
+}
+.border-right-light{
+    border-right: 1px solid #fff;
+} 

@@ -1,0 +1,52 @@
+@import "_color.scss";
+body{
+    background-image: url('../img/background.jpg');
+}
+.icon{
+  max-width:18px;
+  display:inline-block;
+}
+.activity_text{
+  background: url('../img/banner_txt.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 2rem 0;
+  h3{
+    margin-top: 0;  
+  }
+}
+.lists {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    border-bottom: 1px solid $darker;
+    a {
+      text-decoration: none;
+     
+      &> div {
+        display: inline-block;
+      }
+    }
+
+    &:first-child {
+      border-top: 1px solid $darker;
+    }
+  }
+  .date {
+    font-weight: bold;
+  }
+  .label {
+    margin: 0 1rem 0 2rem;
+    background-color: #f29600;
+    padding: 5px 1rem;
+    @include border-radius(4px);
+    @extend .text-light;
+  }
+}
+.border-dash{
+    padding: 5px;
+    border:1px dashed #00913A;
+    @include border-radius(5px);
+}

@@ -1,0 +1,14 @@
+@import "_color.scss";
+header {
+  border-bottom: 3px solid $secondColor;
+  .header-logo {
+    max-width: 200px;
+    width: 100%;
+  }
+}
+nav {
+  & > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
