@@ -2,13 +2,47 @@
 header {
   border-bottom: 3px solid $secondColor;
   .header-logo {
-    max-width: 200px;
+    max-width: 280px;
     width: 100%;
+    @include phone-width(){
+      margin-bottom: 1rem;
+    }
+  }
+  .icon{
+    max-width: 30px;
+  }
+  a{
+    color:#fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    line-height: 50px;
+    @include phone-width(){
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+    &:visited{
+      color:#fff;
+    }
+    &:hover{
+      opacity: .9;
+    }
   }
 }
 nav {
   & > div {
     display: inline-block;
     vertical-align: middle;
+    border-right: 1px dashed #C8BB9B;
+    padding: 0 10px;
+    height: 50px;
+    @include phone-width(){
+    
+      border: 0;
+      height: auto;
+      padding: 0 5px;
+      .icon{
+        display: none;
+      }
+    }
   }
 }

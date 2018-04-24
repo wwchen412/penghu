@@ -1,12 +1,26 @@
 footer{
     margin-top: 150px;
     padding: 50px 0;
+    @include phone-width(){
+        margin-top: 10vw;
+        text-align: center;
+        img{
+            margin: 0 auto;
+        }
+    }
    .container div{
         display: inline-block;
         vertical-align: middle;
+        @include phone-width(){
+            display: block;
+            border: 0;
+        }
     }
 }
 .footer-vector{
     max-width: 20%;
     top: -150px;
+    @include phone-width(){
+        top:-20vw;
+    }
 }

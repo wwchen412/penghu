@@ -5,17 +5,44 @@ body{
 .icon{
   max-width:18px;
   display:inline-block;
+  vertical-align:middle;
+  margin-right: 3px;
+  img{
+    width: 100%;
+  }
 }
 .activity_text{
   background: url('../img/banner_txt.png');
+  padding: 2rem 0;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 100%;
-  padding: 2rem 0;
-  h3{
-    margin-top: 0;  
+  background-size:100%;
+  
+  @include phone-width(){
+    background-image:url('../img/green_01.jpg');
+    background-size: auto;
+    background-repeat: repeat;
+    margin: 1rem 0;
+    padding: 1rem;
+    @include border-radius(5px);
+    .inner-border{
+      border:1px dashed #fff;
+      padding: 1rem;
+    }
   }
+  h3{
+    padding: 1rem 0;
+    margin: 0;
+    @include pc-width(){
+      transform: translateY(-1rem);
+    }
+    @include pad-width(){
+      transform: translateY(-1rem);
+    }
+    }
+    
 }
+// 最新消息
 .lists {
   padding: 0;
   margin: 0;
@@ -43,6 +70,15 @@ body{
     padding: 5px 1rem;
     @include border-radius(4px);
     @extend .text-light;
+  }
+  .title{
+    @include phone-width(){
+      margin: 1rem 0 0;
+      display: block;
+      overflow : hidden;
+      text-overflow : ellipsis;
+      white-space : nowrap;
+    }
   }
 }
 .border-dash{

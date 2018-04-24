@@ -3,3 +3,31 @@
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 }
+
+// rwd query
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:768px;
+$phones-media:479px;
+
+//pc
+ @mixin pc-width() {
+  @media all and (min-width: $pc-media) {
+               @content;
+         }
+    }
+//pad
+ @mixin pad-width() {
+	@media all and (min-width:$pad-media) and (max-width: $pcs-media) {
+                @content;
+          }
+}
+
+//phone
+ @mixin phone-width() {
+        @media all and (max-width: $phones-media) {
+                @content;
+          }
+ }
+
+ 

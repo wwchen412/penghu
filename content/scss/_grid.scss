@@ -54,6 +54,7 @@ a{
 }
 h2{
     font-size: 1.5rem;
+    
 }
 
 .row{
@@ -62,6 +63,14 @@ h2{
     .penghu-4{
        float: left;
         width: calc(100% / 3);
+        padding: 0 5px;
+        @include phone-width(){
+            width: 100%;
+        };
+    }
+    .penghu-phone-12{
+        float: left;
+        width: calc(100%);
         padding: 0 5px;
     }
 }
