@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .bg_green {
   background-image: url("../img/green_01.jpg"); }
 
@@ -13,6 +14,9 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+body {
+  font-family: proxima-nova, Helvetica, Arial, "PingFang TC", "微軟正黑體", "Microsoft JhengHei", sans-serif; }
 
 .container, .container-min {
   margin: auto; }
