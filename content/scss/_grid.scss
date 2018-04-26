@@ -24,8 +24,16 @@ h2{
     font-size: 1.5rem;
     
 }
+h6{
+    font-size: .8rem;
+    color:#ccc;
+    margin: 0 0 1rem;
+}
 a,p{
     font-size: 1rem;
+}
+p{
+    line-height: 150%;
 }
 input{
    
@@ -67,6 +75,10 @@ input{
     margin-top:1rem;
     margin-bottom: 1rem; 
 }
+.my-5{
+    margin-top:1.5rem;
+    margin-bottom: 1.5rem; 
+}
 .py-3{
     padding-top:1rem;
     padding-bottom: 1rem; 
@@ -99,4 +111,7 @@ input{
 }
 .position-ab{
     position: absolute;
+}
+.rounded{
+    @include border-radius(5px);
 }
