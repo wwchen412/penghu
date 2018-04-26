@@ -1,61 +1,74 @@
 @import "_color.scss";
-body{
-    background-image: url('../img/background.jpg');
+@import "_mixin.scss";
+body {
+  background-image: url("../img/background.jpg");
 }
-.icon{
-  max-width:18px;
-  display:inline-block;
-  vertical-align:middle;
+.icon {
+  max-width: 18px;
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 3px;
-  img{
+  img {
     width: 100%;
   }
 }
-.activity_text{
-  background: url('../img/banner_txt.png');
+.page-title {
+  background: url("../img/banner_txt.png");
   padding: 2rem 0;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size:100%;
+  background-size: 100%;
   position: relative;
-  transform: translateY(-50%);
-  @include phone-width(){
-    background-image:url('../img/green_01.jpg');
-    background-size: auto;
-    background-repeat: repeat;
-    margin: 1rem 0;
-    padding: 1rem;
-    @include border-radius(5px);
-    .inner-border{
-      border:1px dashed #fff;
+  &.page-title-sm {
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+  }
+  &.activity_text {
+    transform: translateY(-50%);
+    @include phone-width() {
+      background-image: url("../img/green_01.jpg");
+      background-size: auto;
+      background-repeat: repeat;
+      margin: 1rem 0;
       padding: 1rem;
+      transform: translateY(0);
+      @include border-radius(5px);
+      .inner-border {
+        border: 1px dashed #fff;
+        padding: 1rem;
+      }
+    }
+    h3 {
+      @include pc-width() {
+        transform: translateY(-1rem);
+      }
+      @include phone-width() {
+    transform: translateY(0);
+  }
     }
   }
-  h3{
-    padding: 1rem 0;
-    margin: 0;
-    @include pc-width(){
-      transform: translateY(-1rem);
-    }
-    
-    }
-    
 }
-// 最新消息
+
+h3 {
+  padding: 1rem 0;
+  margin: 0;
+  transform: translateY(-0.5rem);
+  
+}
+// 最新消息列表
 .lists {
   padding: 0;
   margin: 0;
   li {
     list-style: none;
-    border-bottom: 1px dashed $primary;
+    border-bottom: 1px solid $primary;
     a {
       text-decoration: none;
-     
-      &> div {
+      & > div {
         display: inline-block;
       }
     }
-
     &:first-child {
       border-top: 1px solid $primary;
     }
@@ -70,18 +83,87 @@ body{
     @include border-radius(4px);
     @extend .text-light;
   }
-  .title{
-    @include phone-width(){
+  .title {
+    @include phone-width() {
       margin: 1rem 0 0;
       display: block;
-      overflow : hidden;
-      text-overflow : ellipsis;
-      white-space : nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }
-.border-dash{
-    padding: 5px;
-    border:1px dashed #00913A;
+.border-dash {
+  padding: 5px;
+  border: 1px dashed #00913a;
+  @include border-radius(5px);
+}
+// 選擇分類tab
+.tabs{
+  @extend %ul-nostyle;
+  font-size: 0;
+  li{
+    display: inline-block;
+   width: calc(100% / 6 - 10px);
+   margin: 0 5px;
+  }
+  a{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #023F63;
     @include border-radius(5px);
+    &:hover{
+      background-color:lighten(#023F63,10%);
+    }
+  }
+}
+// search文章
+.search-group{
+  font-size: 0;
+  margin: 1rem 5px;
+  &>*{
+    display: inline-block;
+    font-size: 1rem;
+    border: 1px solid $primary-light;
+    line-height: 1.5rem;
+  }
+  input{
+    width: calc(100% - 130px);
+    padding: 10px 10px 10px 40px;
+    outline: 0;
+   
+    @include border-radius-all(5px,0,0,5px);
+
+  }
+  button{
+    width: 130px;
+    background-color: $primary-light;
+    padding: 10px;
+    @include border-radius-all(0,5px,5px,0);
+  }
+}
+
+
+.pages-num{
+  text-align: center;
+  li{
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+  }
+  @extend %ul-nostyle;
+  a{
+    width: 30px;
+    height: 30px;
+    display: block;
+    @include border-radius(3px);
+    line-height: 30px;
+    transition: .2s;
+    &:hover,
+    &.active{
+      background-color: $primary-light;
+      @extend .text-light;
+    }
+  }
 }

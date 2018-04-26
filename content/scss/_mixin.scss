@@ -3,7 +3,11 @@
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 }
-
+@mixin border-radius-all($t,$r,$b,$l){
+      border-radius: $t $r $b $l;
+      -webkit-border-radius: $t $r $b $l;
+	-moz-border-radius: $t $r $b $l;
+}
 // rwd query
 $pc-media:768px;
 
@@ -25,4 +29,7 @@ $phones-media:767px;
           }
  }
 
- 
+ %ul-nostyle{
+       padding: 0;
+       list-style: none;
+ }

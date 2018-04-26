@@ -3,6 +3,7 @@ $lightColor : #fff;
 $secondColor:#DAD0BA;
 $darker:#888;
 $primary:#006934;
+$primary-light:#8DC21F;
 
 
 // bg-colors
@@ -18,7 +19,11 @@ $primary:#006934;
 // text-colors
 .text-light{
     color:$lightColor;
+    &:visited{
+        color:$lightColor;
+    }
 }
 .border-right-light{
     border-right: 1px solid #fff;
+   
 } 

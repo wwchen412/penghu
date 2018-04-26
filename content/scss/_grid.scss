@@ -1,9 +1,38 @@
+// tag setting
 *{
     box-sizing: border-box;
     
 }
 body{
     font-family: proxima-nova, Helvetica, Arial, "PingFang TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color:$deafaultColor;
+    &:visited{
+        color:$deafaultColor;
+    }
+}
+h2{
+    font-size: 1.5rem;
+    
+}
+a,p{
+    font-size: 1rem;
+}
+input{
+   
+    &::-webkit-input-placeholder{
+        color:#ccc;
+    }
+
 }
 %margin-auto{
      margin: auto;
@@ -45,24 +74,8 @@ body{
 .text-center{
     text-align: center;
 }
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-a{
-    color:$deafaultColor;
-    &:visited{
-        color:$deafaultColor;
-    }
-}
-h2{
-    font-size: 1.5rem;
-    
-}
-p{
-    font-size: 1rem;
-}
+
+
 
 .row{
    clear: both;
