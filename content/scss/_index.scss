@@ -17,7 +17,8 @@ body{
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size:100%;
-  
+  position: relative;
+  transform: translateY(-50%);
   @include phone-width(){
     background-image:url('../img/green_01.jpg');
     background-size: auto;
@@ -36,9 +37,7 @@ body{
     @include pc-width(){
       transform: translateY(-1rem);
     }
-    @include pad-width(){
-      transform: translateY(-1rem);
-    }
+    
     }
     
 }
@@ -48,7 +47,7 @@ body{
   margin: 0;
   li {
     list-style: none;
-    border-bottom: 1px solid $darker;
+    border-bottom: 1px dashed $primary;
     a {
       text-decoration: none;
      
@@ -58,7 +57,7 @@ body{
     }
 
     &:first-child {
-      border-top: 1px solid $darker;
+      border-top: 1px solid $primary;
     }
   }
   .date {

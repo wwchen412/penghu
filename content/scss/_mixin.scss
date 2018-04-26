@@ -5,10 +5,9 @@
 }
 
 // rwd query
-$pc-media:960px;
-$pcs-media:959px;
-$pad-media:768px;
-$phones-media:479px;
+$pc-media:768px;
+
+$phones-media:767px;
 
 //pc
  @mixin pc-width() {
@@ -17,11 +16,7 @@ $phones-media:479px;
          }
     }
 //pad
- @mixin pad-width() {
-	@media all and (min-width:$pad-media) and (max-width: $pcs-media) {
-                @content;
-          }
-}
+
 
 //phone
  @mixin phone-width() {

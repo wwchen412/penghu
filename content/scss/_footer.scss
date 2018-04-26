@@ -1,4 +1,5 @@
 footer{
+    font-size: 0;
     margin-top: 150px;
     padding: 50px 0;
     @include phone-width(){
@@ -8,18 +9,25 @@ footer{
             margin: 0 auto;
         }
     }
-   .container div{
+   .connection{
         display: inline-block;
         vertical-align: middle;
+        width: calc(100% / 4);
         @include phone-width(){
             display: block;
             border: 0;
+            width: 100%;
+        }
+        &>img{
+            max-height: 100px;
+            margin: auto;
         }
     }
+    
 }
 .footer-vector{
     max-width: 20%;
-    top: -150px;
+    top: -120%;
     @include phone-width(){
         top:-20vw;
     }
