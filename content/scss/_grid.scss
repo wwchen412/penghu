@@ -100,6 +100,14 @@ input{
             width: 100%;
         };
     }
+    .penghu-3{
+        float: left;
+        width: calc(100% / 4);
+        padding: 0 5px;
+        @include phone-width(){
+            width: 100%;
+        };
+    }
     .penghu-phone-12{
         float: left;
         width: calc(100%);
@@ -115,3 +123,4 @@ input{
 .rounded{
     @include border-radius(5px);
 }
+

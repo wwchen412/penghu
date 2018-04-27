@@ -198,3 +198,47 @@ article{
     }
   }
 }
+
+//education.html
+.cards{
+    @extend %ul-nostyle;
+}
+.card{ 
+    border:2px solid $primary-lightest;
+    background-color: #fff;
+    padding: 1rem 0 0;
+    margin-bottom: 10px;
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    @include border-radius(5px);
+    &.acrtive,&:hover{
+      border:2px solid $primary-light;
+    }
+    .date{
+      color:#ccc;
+      font-size: 0.8rem;
+      padding-left: 5px;
+    }
+    .title{
+      // clear: both;
+      // overflow: auto;
+      margin-bottom: 1rem;
+      &>span{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 30px;
+        
+      }
+      h6{
+        margin: 0;
+      }
+    }
+    .tag{
+      float: right;
+      padding: 0 10px;
+      background-color: $primary-light;
+      text-align: center;
+      @extend .text-light;
+      box-sizing: border-box;
+    }
+    
+}
