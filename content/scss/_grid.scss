@@ -36,7 +36,7 @@ p{
     line-height: 150%;
 }
 input{
-   
+   outline: 0;
     &::-webkit-input-placeholder{
         color:#ccc;
     }
@@ -59,17 +59,17 @@ input{
      }
 }
 .p-1{
-    padding: .6rem;
+    padding: .6rem !important;
 }
 .p-2{
-    padding: .8rem;
+    padding: .8rem !important;
 }
 .p-3{
-    padding: 1rem;
+    padding: 1rem !important;
 }
 .py-1{
-    padding-top:.6rem;
-    padding-bottom: .6rem; 
+    padding-top:.6rem !important;
+    padding-bottom: .6rem !important; 
 }
 .my-3{
     margin-top:1rem;
@@ -79,6 +79,12 @@ input{
     margin-top:1.5rem;
     margin-bottom: 1.5rem; 
 }
+.mt-5{
+    margin-top: 3rem;
+}
+.m-auto{
+    margin: auto;
+}
 .py-3{
     padding-top:1rem;
     padding-bottom: 1rem; 
@@ -86,33 +92,40 @@ input{
 .text-center{
     text-align: center;
 }
-
+.text-left{
+    text-align: left;
+}
 
 
 .row{
    clear: both;
    overflow: auto;
     .penghu-4{
-       float: left;
+       
         width: calc(100% / 3);
-        padding: 0 5px;
-        @include phone-width(){
-            width: 100%;
-        };
+         @extend %col;  
     }
     .penghu-3{
-        float: left;
+        
         width: calc(100% / 4);
-        padding: 0 5px;
-        @include phone-width(){
-            width: 100%;
-        };
+        @extend %col;  
+    }
+    .penghu-6{
+        width: calc(100% / 2);
+        @extend %col;  
     }
     .penghu-phone-12{
         float: left;
         width: calc(100%);
         padding: 0 5px;
     }
+}
+%col{
+ float: left;
+ padding: 0 5px;
+  @include phone-width(){
+            width: 100%;
+        };
 }
 .position-re{
     position: relative;

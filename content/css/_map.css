@@ -1,0 +1,33 @@
+.bg_green {
+  background-image: url("../img/green_01.jpg"); }
+
+.bg_green_light {
+  background-image: url("../img/green_02.jpg"); }
+
+.bg-light {
+  background: #fff; }
+
+.text-light {
+  color: #fff; }
+  .text-light:visited {
+    color: #fff; }
+
+.border-right-light {
+  border-right: 1px solid #fff; }
+
+.border-primary-light {
+  border: 1px solid #8DC21F; }
+
+.border-lg {
+  border-width: 2px; }
+
+.map-wrap {
+  position: relative; }
+
+.map-content {
+  width: 40%;
+  height: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #f00; }
