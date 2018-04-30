@@ -102,7 +102,11 @@ input{
 .text-left{
     text-align: left;
 }
-
+.phone-none{
+    @include phone-width(){
+        display: none;
+    }
+}
 
 .row{
    clear: both;

@@ -4,11 +4,17 @@
   padding: 2rem 0 3rem;
   background-color: #ffcf60;
   .btn {
-    transform: translateY(-50%);
+    
     position: relative;
     font-size: 1rem;
     max-width: 150px;
     text-align: center;
+    @include phone-width(){
+      margin-bottom: 5px;
+    }
+    @include pc-width(){
+    transform: translateY(-50%);
+    }
     &:before {
       content: "";
       display: block;
