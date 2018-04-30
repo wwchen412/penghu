@@ -385,6 +385,8 @@ body {
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       white-space: nowrap; } }
+  .lists .title:hover {
+    color: #8DC21F; }
 
 .border-dash {
   padding: 5px;
@@ -453,6 +455,8 @@ body {
     transition: 0.2s; }
     .pages-num a:hover, .pages-num a.active {
       background-color: #8DC21F; }
+    .pages-num a.no-hover:hover {
+      background: transparent; }
 
 article .article-title {
   border-bottom: 1px dashed #8DC21F;

@@ -95,6 +95,7 @@ body {
   li {
     list-style: none;
     border-bottom: 1px solid $primary;
+    
     a {
       text-decoration: none;
       & > div {
@@ -123,6 +124,9 @@ body {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+    }
+    &:hover{
+      color: $primary-light;
     }
   }
   
@@ -198,6 +202,11 @@ body {
     &.active {
       background-color: $primary-light;
       @extend .text-light;
+    }
+    &.no-hover{
+      &:hover{
+        background: transparent;
+      }
     }
   }
 }

@@ -94,9 +94,9 @@
                             <span>2939999</span>
                         </p>
                     </div>
-                    
+
                 </div>
-                <button class="btn btn-primary text-light my-3 rounded border-light">
+                <button class="btn btn-primary text-light my-3 rounded border-light js-more-info">
                     詳細資訊
                 </button>
             </div>
@@ -144,7 +144,7 @@
     <div class="container-min mt-5">
         <h3 class="text-center">淨灘成果登記</h3>
     </div>
-    
+
     <form action="">
         <div class="container-min">
 
@@ -203,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <div class="text-center">
             <button class="my-3 btn btn-primary rounded text-center text-light">確認送出</button>
@@ -213,10 +213,10 @@
     <div id="lightbox" style="display: none">
         <div class="container">
             <div class="map-content text-center bg_green">
-               <h3 class="text-center text-light">淨攤詳細資訊</h3>
-               <div class="close">
-                   <img src="content/img/close.svg" alt="">
-               </div>
+                <h3 class="text-center text-light">淨攤詳細資訊</h3>
+                <div class="close">
+                    <img src="content/img/close.svg" alt="">
+                </div>
                 <div class="map-inner text-left">
                     <div class="map-list-title">
                         <h3>赤坎海灘
@@ -226,12 +226,14 @@
                         <p>淨攤次數：
                             <span>9</span>
                         </p>
-                        <p>淨攤總人數： 
+                        <p>淨攤總人數：
                             <span>1834</span>
                         </p>
-                       <p>累積總重量：<span>
-                           4221kg
-                       </span></p>
+                        <p>累積總重量：
+                            <span>
+                                4221kg
+                            </span>
+                        </p>
                     </div>
                     <div class="map-list-title">
                         <h3>赤坎海灘
@@ -239,16 +241,24 @@
                     </div>
                     <div class="row">
                         <div class="penghu-4 garbage">
-                            <p>寶特瓶<span>98098</span></p>
+                            <p>寶特瓶
+                                <span>98098</span>
+                            </p>
                         </div>
                         <div class="penghu-4 garbage">
-                            <p>釣魚用具<span>299</span></p>
+                            <p>釣魚用具
+                                <span>299</span>
+                            </p>
                         </div>
                         <div class="penghu-4 garbage">
-                            <p>玻璃瓶<span>299</span></p>
+                            <p>玻璃瓶
+                                <span>299</span>
+                            </p>
                         </div>
                         <div class="penghu-4 garbage">
-                            <p>瓶罐與容器<span>10</span></p>
+                            <p>瓶罐與容器
+                                <span>10</span>
+                            </p>
                         </div>
                         <div class="penghu-4 garbage">
                             <p>寶特瓶
@@ -292,11 +302,24 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
-        
+
     </div>
+    <!-- jQuery JS 1.12.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.js-more-info').click(function(){
+                $('#lightbox').fadeIn();
+            })
+            $('.close').click(function(){
+                $('#lightbox').fadeOut();
+            })
+        })
+
+    </script>
 </body>
 
 </html>
