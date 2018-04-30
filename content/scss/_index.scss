@@ -21,6 +21,13 @@ body {
   &:hover{
     opacity: .9;
   }
+  &:disabled{
+    background-color: $darker;
+    cursor: not-allowed;
+    &:hover{
+      opacity: 1;
+    }
+  }
 }
 .page-title {
   background: url("../img/banner_txt.png");
