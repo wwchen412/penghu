@@ -143,4 +143,9 @@ input{
 .rounded{
     @include border-radius(5px);
 }
+.phone-left-0{
+    @include phone-width(){
+        left: 0;
+    }
+}
 

@@ -7,6 +7,8 @@
     transform: translateY(-50%);
     position: relative;
     font-size: 1rem;
+    max-width: 150px;
+    text-align: center;
     &:before {
       content: "";
       display: block;
@@ -19,6 +21,11 @@
       left: 1rem;
       top: 50%;
       transform: translateY(-50%);
+    }
+    &:disabled,&.disabled{
+      background-color: $darker;
+      pointer-events: none;
+      cursor: not-allowed;
     }
   }
 }
@@ -92,7 +99,6 @@
   }
   input[type="radio"] {
     -webkit-appearance: none;
-    border: 0;
     border: 2px solid $primary-light;
     box-sizing: border-box;
     position: relative;
@@ -134,3 +140,57 @@
 .score{
     padding: 3rem 0;
 }
+
+.Identity{
+  input[type="radio"]{
+    -webkit-appearance: none;
+    border: 2px solid $primary-light;
+    box-sizing: border-box;
+    position: relative;
+    width: auto;
+    vertical-align: middle;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+    &:checked{
+      &:before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        left: 2px;
+        background-color: $primary-light;
+        @include border-radius(50%);
+      }
+    }
+  }
+  .input-wrap{
+    font-size: 0;
+    label{
+      width: 104px;
+      display: inline-block;
+      font-size: 1rem;
+    }
+    input{
+      font-size: 1rem;
+    }
+    .id-input-group{
+      display: inline-block;
+      width: calc(100% - 104px);
+      vertical-align: top;
+      input{
+        width: 100%;
+        border: 1px solid $primary-light;
+        margin-bottom: 5px;
+        padding: 5px;
+        @include border-radius(3px);
+      }
+    }
+  }
+  
+}
+.hr-dashed{
+    border: 0;
+    border-bottom: 1px dashed $primary-light;
+  }
