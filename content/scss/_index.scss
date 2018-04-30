@@ -36,7 +36,8 @@ body {
     max-width: 550px;
     padding: 3rem 0;
     width: 100%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   &.activity_text {
     transform: translateY(-50%);
@@ -166,6 +167,7 @@ body {
     width: 130px;
     background-color: $primary-light;
     padding: 10px;
+    min-width: auto;
     @include border-radius-all(0, 5px, 5px, 0);
   }
 }

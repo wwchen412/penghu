@@ -5,6 +5,7 @@
 }
 .map-list-title{
 border-bottom:1px dashed $primary; 
+margin-bottom: 1rem;
 }
 .map-content{
     width: 100%;
@@ -16,7 +17,11 @@ border-bottom:1px dashed $primary;
     border:2px solid #fff;
     top: 2rem;
     left: 2rem;
+  
     @include border-radius(5px);
+    @include phone-width(){
+        display: none;
+    }
     h3{
         margin-top: 0;
     }
@@ -30,5 +35,19 @@ border-bottom:1px dashed $primary;
     p{
         margin: 0;
         line-height: 200%;
+    }
+}
+.garbage{
+    @include pc-width(){
+        p{
+    padding-right:2rem ; 
+    } 
+    }
+    
+   
+    span{
+        float: right;
+       text-align: left;
+       color:$darker;
     }
 }

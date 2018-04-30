@@ -296,7 +296,8 @@ body {
     max-width: 550px;
     padding: 3rem 0;
     width: 100%;
-    margin: auto; }
+    margin-left: auto;
+    margin-right: auto; }
   .page-title.activity_text {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -412,6 +413,7 @@ body {
     width: 130px;
     background-color: #8DC21F;
     padding: 10px;
+    min-width: auto;
     border-radius: 0 5px 5px 0;
     -webkit-border-radius: 0 5px 5px 0;
     -moz-border-radius: 0 5px 5px 0; }
@@ -583,7 +585,8 @@ footer {
   position: relative; }
 
 .map-list-title {
-  border-bottom: 1px dashed #006934; }
+  border-bottom: 1px dashed #006934;
+  margin-bottom: 1rem; }
 
 .map-content {
   width: 100%;
@@ -597,6 +600,9 @@ footer {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px; }
+  @media all and (max-width: 767px) {
+    .map-content {
+      display: none; } }
   .map-content h3 {
     margin-top: 0; }
 
@@ -610,6 +616,15 @@ footer {
   .map-inner p {
     margin: 0;
     line-height: 200%; }
+
+@media all and (min-width: 768px) {
+  .garbage p {
+    padding-right: 2rem; } }
+
+.garbage span {
+  float: right;
+  text-align: left;
+  color: #888; }
 
 .tabs, .pages-num, .cards {
   padding: 0;

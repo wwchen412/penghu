@@ -53,6 +53,14 @@
     </header>
     <!-- 地圖區域 -->
     <div id="map" class="map">
+        <!-- 
+            點選地圖地標時
+             map-wrap會load圖標點資料更改內容
+             並可點擊詳細內容案件觀看光箱
+
+             手機版則為點擊地圖圖標時
+             自動展開詳細內容光箱
+         -->
         <div class="map-wrap">
             <iframe src="https://snazzymaps.com/embed/67301" width="100%" height="600px" style="border:none;"></iframe>
             <div class="map-content text-center bg_green">
@@ -63,7 +71,7 @@
                             <span>淨攤次數8</span>
                         </p>
                     </div>
-                    <div class="map-list">
+                    <div class="map-list garbage">
                         <p>寶特瓶
                             <span>2939999</span>
                         </p>
@@ -201,8 +209,8 @@
             <button class="my-3 btn btn-primary rounded text-center text-light">確認送出</button>
         </div>
     </form>
-
-    <div id="lightbox">
+    <!-- 光箱點擊詳細資訊後展開 -->
+    <div id="lightbox" style="display: none">
         <div class="container">
             <div class="map-content text-center bg_green">
                <h3 class="text-center text-light">淨攤詳細資訊</h3>
@@ -215,31 +223,73 @@
                         </h3>
                     </div>
                     <div class="map-list">
-                        <p>淨攤次數
-                            <span>2939999</span>
+                        <p>淨攤次數：
+                            <span>9</span>
                         </p>
-                        <p>寶特瓶
-                            <span>2939999</span>
+                        <p>淨攤總人數： 
+                            <span>1834</span>
                         </p>
-                        <p>寶特瓶
-                            <span>2939999</span>
-                        </p>
-                        <p>寶特瓶
-                            <span>2939999</span>
-                        </p>
-                        <p>寶特瓶
-                            <span>2939999</span>
-                        </p>
-                        <p>寶特瓶
-                            <span>2939999</span>
-                        </p>
-                        <p>寶特瓶
-                            <span>2939999</span>
-                        </p>
+                       <p>累積總重量：<span>
+                           4221kg
+                       </span></p>
                     </div>
                     <div class="map-list-title">
                         <h3>赤坎海灘
                         </h3>
+                    </div>
+                    <div class="row">
+                        <div class="penghu-4 garbage">
+                            <p>寶特瓶<span>98098</span></p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>釣魚用具<span>299</span></p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>玻璃瓶<span>299</span></p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>瓶罐與容器<span>10</span></p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>寶特瓶
+                                <span>98098</span>
+                            </p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>釣魚用具
+                                <span>299</span>
+                            </p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>玻璃瓶
+                                <span>299</span>
+                            </p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>瓶罐與容器
+                                <span>10</span>
+                            </p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>寶特瓶
+                                <span>98098</span>
+                            </p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>釣魚用具
+                                <span>299</span>
+                            </p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>玻璃瓶
+                                <span>299</span>
+                            </p>
+                        </div>
+                        <div class="penghu-4 garbage">
+                            <p>瓶罐與容器
+                                <span>10</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
                
