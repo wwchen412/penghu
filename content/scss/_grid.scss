@@ -42,6 +42,9 @@ input{
     }
 
 }
+.d-block{
+    display: block;
+}
 %margin-auto{
      margin: auto;
 }
@@ -132,10 +135,10 @@ input{
         };
 }
 .position-re{
-    position: relative;
+    position: relative !important;
 }
 .position-ab{
-    position: absolute;
+    position: absolute !important;
 }
 .rounded{
     @include border-radius(5px);

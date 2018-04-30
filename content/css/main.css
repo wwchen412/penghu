@@ -73,6 +73,9 @@ input {
   input::-webkit-input-placeholder {
     color: #ccc; }
 
+.d-block {
+  display: block; }
+
 .container, .container-min {
   margin: auto; }
 
@@ -149,10 +152,10 @@ input {
       width: 100%; } }
 
 .position-re {
-  position: relative; }
+  position: relative !important; }
 
 .position-ab {
-  position: absolute; }
+  position: absolute !important; }
 
 .rounded {
   border-radius: 5px;
@@ -783,3 +786,81 @@ footer {
     border: 2px solid #8DC21F;
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
+
+.question-block {
+  border: 2px solid #8DC21F;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+  .question-block .page-title {
+    -webkit-transform: translateY(-75%);
+    -ms-transform: translateY(-75%);
+    transform: translateY(-75%); }
+  @media all and (max-width: 767px) {
+    .question-block .penghu-6 {
+      width: 50%; } }
+
+.answer-boy {
+  position: relative; }
+  .answer-boy > img {
+    max-width: 96px; }
+  .answer-boy .dialog {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 69px;
+    height: 67px;
+    background-image: url("../img/answer_df.svg");
+    background-size: cover; }
+    .answer-boy .dialog.right {
+      background-image: url("../img/answer_ri.svg"); }
+    .answer-boy .dialog.wrong {
+      background-image: url("../img/answer_wr.svg"); }
+
+.answers label {
+  width: 100%; }
+
+.answers input {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 1rem; }
+
+.answers input[type="radio"] {
+  -webkit-appearance: none;
+  border: 0;
+  border: 2px solid #8DC21F;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  width: auto;
+  vertical-align: middle; }
+  .answers input[type="radio"]:checked:before {
+    content: "✘";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #f00;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .answers input[type="radio"]:checked.right:before {
+    content: "✔";
+    color: #8DC21F; }
+  .answers input[type="radio"]:checked.right + span {
+    color: #8DC21F; }
+  .answers input[type="radio"]:checked + span {
+    color: #f00; }
+
+.tips {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+
+.tip-content {
+  background-color: #fff;
+  border: 1px dashed #006934; }
+
+.score {
+  padding: 3rem 0; }
